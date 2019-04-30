@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         al.add("Secular");
         al.add("Ethnic & Religion");
 
-        aa = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, al);
+        aa = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, al);
 
         lv.setAdapter(aa);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedType = al.get(position);
 
-                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                Intent i = new Intent(MainActivity.this, HolidayMain.class);
                 i.putExtra("type", selectedType);
                 startActivity(i);
             }
